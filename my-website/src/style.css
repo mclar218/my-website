@@ -1,0 +1,196 @@
+body {
+    background-color: transparent;
+}
+
+h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-top: 0;
+}
+
+img {
+    display: block;
+    margin: 2em auto 0.3em auto; /* add top margin to raise image and show blue space */
+    width: 180px;
+    border-radius: 50%;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 1em;
+}
+
+.banner-bg {
+    width: 100vw;
+    max-width: none;
+    height: 100px;
+    margin: 0; /* Remove vertical margin to connect backgrounds */
+    background: url('img/blue stuff.jpg') center center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+
+.banner-bg h1 {
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+.banner-bg .objective {
+    margin: 0.3em 0 0 0;
+    font-size: 1em;
+    text-align: center;
+    background: rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding: 0.2em 0.8em;
+    display: inline-block;
+}
+
+.education-bg {
+    position: relative;
+    background: none;
+    padding: 2em 0;
+    width: 100vw;
+    margin: 0; /* Remove vertical margin to connect backgrounds */
+}
+
+.education-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background: url('img/ksu image.png') center 25%/cover no-repeat;
+    opacity: 0.5; /* slight opacity for readability */
+    z-index: 0;
+}
+
+.education-bg section {
+    position: relative;
+    z-index: 1;
+    background: none;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 1em 2em;
+}
+
+.technical-bg {
+    position: relative;
+    background: none;
+    padding: 2em 0;
+    width: 100vw;
+    margin: 0; /* Remove vertical margin to connect backgrounds */
+}
+
+.technical-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background: url('img/tech image.jpg') center 40%/cover no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.technical-bg section {
+    position: relative;
+    z-index: 1;
+    background: none;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 1em 2em;
+}
+
+.contact-bg {
+    position: relative;
+    background: none;
+    padding: 2em 0;
+    width: 100vw;
+    margin: 0; /* Remove vertical margin to connect backgrounds */
+}
+
+.contact-bg::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100vw;
+    height: 100%;
+    background: url('img/other blue.jpg') center 40%/cover no-repeat;
+    opacity: 0.5;
+    z-index: 0;
+}
+
+.contact-bg section {
+    position: relative;
+    z-index: 1;
+    background: none;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 1em 2em;
+}
+
+.contact-bg section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.linkedin-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.linkedin-logo {
+    width: 48px;
+    height: 48px;
+    display: block;
+    transition: transform 0.2s;
+}
+
+.linkedin-logo:hover {
+    transform: scale(1.1);
+}
+
+.reflection-bg {
+    position: relative;
+    background: none;
+    padding: 2em 0;
+    width: 100vw;
+    margin: 0;
+}
+
+.reflection-bg section {
+    position: relative;
+    z-index: 1;
+    background: none;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 0;
+    padding: 1em 2em;
+}
+
+.reflection-questions {
+    font-size: 1.1em;
+    margin: 1em 0 0 0;
+    padding-left: 1.2em;
+}
+
+.reflection-questions li {
+    margin-bottom: 0.7em;
+}
