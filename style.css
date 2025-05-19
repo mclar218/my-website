@@ -1,31 +1,36 @@
 body {
     background-color: transparent;
+    font-size: 13px;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     text-align: center;
-    font-size: 3em;
-    margin-top: 0;
+    font-size: 1.5em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
 
 img {
     display: block;
-    margin: 2em auto 0.3em auto; /* add top margin to raise image and show blue space */
-    width: 180px;
+    margin: 0.5em auto 0.2em auto;
+    width: 120px;
     border-radius: 50%;
 }
 
 p {
     text-align: center;
-    font-size: 1.5em;
-    margin-top: 1em;
+    font-size: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
 }
 
 .banner-bg {
     width: 100vw;
     max-width: none;
-    height: 100px;
-    margin: 0; /* Remove vertical margin to connect backgrounds */
+    height: 60px;
+    margin: 0;
     background: url('img/blue stuff.jpg') center center/cover no-repeat;
     display: flex;
     flex-direction: column;
@@ -37,89 +42,83 @@ p {
     left: 50%;
     right: 50%;
     transform: translateX(-50%);
-    position: relative;
 }
 
 .banner-bg h1 {
     margin: 0;
-    font-size: 2em;
+    font-size: 1.1em;
     text-align: center;
 }
 
 .banner-bg .objective {
-    margin: 0.3em 0 0 0;
-    font-size: 1em;
+    margin: 0.1em 0 0 0;
+    font-size: 0.9em;
     text-align: center;
-    background: rgba(0,0,0,0.25);
-    border-radius: 8px;
-    padding: 0.2em 0.8em;
+    background: rgba(0,0,0,0.18);
+    border-radius: 6px;
+    padding: 0.1em 0.5em;
     display: inline-block;
 }
 
-.education-bg {
-    position: relative;
-    background: none;
-    padding: 2em 0;
+.main-sections-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1em;
     width: 100vw;
-    margin: 0; /* Remove vertical margin to connect backgrounds */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-.education-bg::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 100vw;
-    height: 100%;
-    background: url('img/ksu image.png') center 25%/cover no-repeat;
-    opacity: 0.5; /* slight opacity for readability */
-    z-index: 0;
+.education-bg,
+.technical-bg {
+    flex: 1 1 0;
+    min-width: 0;
+    position: relative;
+    background: none;
+    padding: 0.5em 0;
+    margin: 0;
+}
+
+.education-bg::before,
+.technical-bg::before {
+    content: none;
+    background: none;
+    opacity: 0;
 }
 
 .education-bg section {
     position: relative;
     z-index: 1;
-    background: none;
-    max-width: 600px;
+    background: 
+        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+        url('img/ksu image.png') center 25%/cover no-repeat;
+    max-width: 350px;
     margin: 0 auto;
     border-radius: 0;
-    padding: 1em 2em;
-}
-
-.technical-bg {
-    position: relative;
-    background: none;
-    padding: 2em 0;
-    width: 100vw;
-    margin: 0; /* Remove vertical margin to connect backgrounds */
-}
-
-.technical-bg::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    width: 100vw;
-    height: 100%;
-    background: url('img/tech image.jpg') center 40%/cover no-repeat;
-    opacity: 0.5;
-    z-index: 0;
+    padding: 0.3em 0.5em;
 }
 
 .technical-bg section {
     position: relative;
     z-index: 1;
-    background: none;
-    max-width: 600px;
+    background: 
+        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+        url('img/tech image.jpg') center 40%/cover no-repeat;
+    max-width: 350px;
     margin: 0 auto;
     border-radius: 0;
-    padding: 1em 2em;
+    padding: 0.3em 0.5em;
 }
 
-.contact-bg {
+.contact-bg,
+.reflection-bg {
     position: relative;
     background: none;
-    padding: 2em 0;
+    padding: 0.5em 0;
     width: 100vw;
-    margin: 0; /* Remove vertical margin to connect backgrounds */
+    margin: 0;
 }
 
 .contact-bg::before {
@@ -129,18 +128,19 @@ p {
     width: 100vw;
     height: 100%;
     background: url('img/other blue.jpg') center 40%/cover no-repeat;
-    opacity: 0.5;
+    opacity: 0.3;
     z-index: 0;
 }
 
-.contact-bg section {
+.contact-bg section,
+.reflection-bg section {
     position: relative;
     z-index: 1;
     background: none;
-    max-width: 600px;
+    max-width: 350px;
     margin: 0 auto;
     border-radius: 0;
-    padding: 1em 2em;
+    padding: 0.3em 0.5em;
 }
 
 .contact-bg section ul {
@@ -153,44 +153,26 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 1em;
+    margin-top: 0.3em;
 }
 
 .linkedin-logo {
-    width: 48px;
-    height: 48px;
+    width: 32px;
+    height: 32px;
     display: block;
     transition: transform 0.2s;
 }
 
 .linkedin-logo:hover {
-    transform: scale(1.1);
-}
-
-.reflection-bg {
-    position: relative;
-    background: none;
-    padding: 2em 0;
-    width: 100vw;
-    margin: 0;
-}
-
-.reflection-bg section {
-    position: relative;
-    z-index: 1;
-    background: none;
-    max-width: 600px;
-    margin: 0 auto;
-    border-radius: 0;
-    padding: 1em 2em;
+    transform: scale(1.07);
 }
 
 .reflection-questions {
-    font-size: 1.1em;
-    margin: 1em 0 0 0;
-    padding-left: 1.2em;
+    font-size: 0.95em;
+    margin: 0.3em 0 0 0;
+    padding-left: 1em;
 }
 
 .reflection-questions li {
-    margin-bottom: 0.7em;
+    margin-bottom: 0.3em;
 }
